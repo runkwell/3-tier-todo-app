@@ -42,15 +42,9 @@ Attach to runner EC2 instance:
   "Statement": [{
     "Effect": "Allow",
     "Action": [
-      "ecr:GetAuthorizationToken",
-      "ecr:BatchGetImage",
-      "ecr:PutImage",
-      "ec2:DescribeLaunchTemplates",
-      "ec2:DescribeLaunchTemplateVersions",
+      "ecr:*",
       "ec2:CreateLaunchTemplateVersion",
-      "autoscaling:DescribeAutoScalingGroups",
-      "autoscaling:StartInstanceRefresh",
-      "autoscaling:DescribeInstanceRefreshes"
+      "autoscaling:UpdateAutoScalingGroup"
     ],
     "Resource": "*"
   }]
