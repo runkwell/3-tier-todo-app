@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'Senior Level Infrastructure: VPC, ALB, ASG, RDS Multi-AZ, CloudFront, and SNS Monitoring.'
+Description: 'Infrastructure: VPC, ALB, ASG, RDS Multi-AZ, CloudFront, and SNS Monitoring.'
 
 Parameters:
   ProjectName:
@@ -7,11 +7,11 @@ Parameters:
     Default: todo-project-779922
   EmailNotification:
     Type: String
-    Default: your_email@gmail.com
+    Default: your_email@gmail.com # Change your mail receive alert
   DBPassword:
     Type: String
     NoEcho: true
-    Default: "SeniorSecurePass123!"
+    Default: "Your_Strong_Password" # Change your password DB
   ImageTagPlaceholder:
     Type: String
     Default: "latest"
@@ -19,7 +19,7 @@ Parameters:
 Mappings:
   RegionMap:
     ap-southeast-1:
-      AMI: ami-0df7a207adb9748c7 # Amazon Linux 2 (Verify latest in console)
+      AMI: ami-0df7a207adb9748c7 # Amazon Linux 2, change for your AMI
 
 Resources:
   # --- NETWORK LAYER ---
